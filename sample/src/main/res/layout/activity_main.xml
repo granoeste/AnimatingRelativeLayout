@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.granoeste.animatingrelativelayoutsample.MainActivity">
+
+    <Button
+        android:id="@+id/animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Animation" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <net.granoeste.animatingrelativelayout.widget.AnimatingRelativeLayout
+            android:id="@+id/firstly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/firstly"
+            android:visibility="visible" />
+
+        <net.granoeste.animatingrelativelayout.widget.AnimatingRelativeLayout
+            android:id="@+id/secondly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/secondly"
+            android:visibility="gone"
+            app:outAnimation="@anim/scale_out" />
+
+        <net.granoeste.animatingrelativelayout.widget.AnimatingRelativeLayout
+            android:id="@+id/thirdly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/thirdly"
+            android:visibility="gone"
+            app:inAnimation="@anim/scale_in"
+            app:outAnimation="@anim/slide_out_bottom" />
+
+        <net.granoeste.animatingrelativelayout.widget.AnimatingRelativeLayout
+            android:id="@+id/fourthly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fourthly"
+            android:visibility="gone"
+            app:inAnimation="@anim/slide_in_top"
+            app:outAnimation="@android:anim/slide_out_right" />
+
+        <net.granoeste.animatingrelativelayout.widget.AnimatingRelativeLayout
+            android:id="@+id/fifthly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/fifthly"
+            android:visibility="gone"
+            app:inAnimation="@android:anim/slide_in_left" >
+            </net.granoeste.animatingrelativelayout.widget.AnimatingRelativeLayout>
+
+    </FrameLayout>
+
+</LinearLayout>
